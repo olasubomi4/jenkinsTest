@@ -1,5 +1,8 @@
 pipeline {
     agent any
+       triggers {
+            githubPush()
+        }
      tools {
             maven 'mv'  // Use the name given in Global Tool Configuration
         }
