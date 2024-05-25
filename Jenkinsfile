@@ -25,5 +25,14 @@ pipeline {
                                 }
                             }
                         }
+                     stage('Deploy') {
+                         steps {
+                             script {
+                                 sh 'java -jar /target/jenkinsTest-0.0.1-SNAPSHOT.jar'
+                             }
+                         }
+                     }
+
+
     }
 }
