@@ -28,7 +28,7 @@ pipeline {
                       stage('test env') {
                          steps {
                              script {
-                                echo "hello {name}"
+                                echo "hello ${name}"
                              }
                          }
                      }
