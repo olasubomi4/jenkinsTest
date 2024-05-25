@@ -17,5 +17,13 @@ pipeline {
                         echo 'hello test 3'
                     }
                 }
+                stage('Print Current Directory') {
+                            steps {
+                                script {
+                                    def currentDir = pwd()
+                                    echo "Current directory: ${currentDir}"
+                                }
+                            }
+                        }
     }
 }
