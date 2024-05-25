@@ -25,6 +25,13 @@ pipeline {
                                 }
                             }
                         }
+                      stage('test env') {
+                         steps {
+                             script {
+                                echo "hello {name}"
+                             }
+                         }
+                     }
                      stage('Deploy') {
                          steps {
                              script {
